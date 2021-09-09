@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #2F80ED;
+    background-color: #aeaeae;
+}
+
+body, input, button, textarea {
+    font: 500 18px Changa, sans-serif;
+}
