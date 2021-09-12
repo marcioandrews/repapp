@@ -4,9 +4,11 @@ import Landing from './pages/Landing';
 function Routes() {
     return (
         <BrowserRouter>
-            <Route path="/" component={Landing} />
+            <Switch>
+                 <Route path="/" exact component={Landing} />
+            </Switch>
         </BrowserRouter>
-    );
+    ); 
 }
 
 export default Routes;
