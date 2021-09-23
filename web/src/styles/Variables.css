@@ -1,0 +1,20 @@
+:root {
+
+    /* --LIGHT--MODE--*/
+
+    --bg-primary: linear-gradient(180deg, #FFEFEF 0%, #FFFFFF 100%);
+    --bg-secondary: #eee;
+    --h1-color: #2F80ED;
+    --p-color: #6d6d6d;
+    --link-color: #2F80ED;
+    --link-color-hover: #3cc368;
+
+    /* --DARK--MODE--*/
+
+    --bg-primary-dark: #000;
+    --bg-secondary-dark: #eee;
+    --h1-color-dark: #3cc368;
+    --p-color-dark: #6d6d6d;
+    --link-color-dark: #2F80ED;
+    --link-color-hover-dark: #3cc368;
+}

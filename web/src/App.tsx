@@ -1,9 +1,12 @@
 import Routes from './routes';
-
+import DarkMode from './components/DarkModeButton';
 
 function App() {
   return (
-    <Routes />
+    <>
+      <DarkMode />
+      <Routes />
+    </>
   );
 }
 
