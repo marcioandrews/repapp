@@ -5,10 +5,36 @@
 }
 
 body {
-    color: #2F80ED;
-    background-color: #aeaeae;
+    color: var(--text-color);
+    background-color: var(--background-primary);
 }
+
+body.light {
+    --background-primary: var(--bg-primary);
+    --text-color: var(--h1-color);
+}
+
+body.dark {
+    --background-primary: var(--bg-primary-dark);
+    --text-color: var(--h1-color-dark);
+}
+
+
+p {
+    color: var(--p-color);
+}
+
+a {
+    color: var(--link-color);
+
+}
+
+a:hover {
+    color: var(--link-color-hover);
+}
+
 
 body, input, button, textarea {
     font: 500 18px Changa, sans-serif;
+
 }
