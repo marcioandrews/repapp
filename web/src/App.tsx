@@ -1,12 +1,11 @@
+import Navbar from './components/navbar/Navbar';
 import Routes from './routes';
-import DarkMode from './components/DarkModeButton';
 
 function App() {
   return (
-    <>
-      <DarkMode />
-      <Routes />
-    </>
+
+      <Routes/>
+    
   );
 }
 
