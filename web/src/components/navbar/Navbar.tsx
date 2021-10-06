@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import '../../styles/components/navbar/Navbar.css';
+import '../../styles/Global.css';
+import '../../styles/Variables.css';
 import Dropdown from './Dropdown';
 import logoImg from '../../assets/logo.svg';
+import logoImgW from '../../assets/logoW.svg';
 import DarkMode from '../DarkModeButton';
 
 function Navbar() {
@@ -45,7 +48,7 @@ window.addEventListener('scroll', changeBackground)
     <>
       <nav className={navbar ? 'navbar active' : 'navbar'}>
         <Link to="/WorkSpace" className='navbar-logo' onClick={closeMobileMenu}>
-        <img src={logoImg} alt="Repapp" />
+        {navbar ? <img src={logoImg} alt="Repapp" /> : <img src={logoImgW} alt="Repapp" />}
           {/* <i className='fab fa-firstdraft' /> */}
         </Link>
         <div className='menu-icon' onClick={handleClick}>

@@ -1,5 +1,5 @@
 .dropdown-menu {
-    background: red;
+    /* background: red; */
     width: 200px;
     position: absolute;
     top: 80px;
@@ -8,7 +8,7 @@
   }
   
   .dropdown-menu li {
-    background: #1888ff;
+    background: rgba(66, 66, 66, 0.815);
     cursor: pointer;
   }
   
