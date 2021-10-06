@@ -11,7 +11,7 @@ function WorkSpace() {
       <Navbar />
       <main>
         <div className="content-wrapper"> 
-          <h1>O Repapp ajuda os times a agilizar o trabalho.</h1>
+          <h1>O Repapp ajuda os times a agilizar o trabalho. teste</h1>
           <p>Colabore, gerencie projetos e alcance novos picos de produtividade. Seja em um arranha-céu ou em’ home office, o jeito de trabalhar do seu time é único, e o Trello pode ajudar você a produzir cada vez mais.</p>
           <div className="box"> 
            <p>Colabore, gerencie projetos e alcance novos picos de produtividade. Seja em um arranha-céu ou em’ home office, o jeito de trabalhar do seu time é único, e o Trello pode ajudar você a produzir cada vez mais.</p>
