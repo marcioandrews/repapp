@@ -6,17 +6,54 @@
 
 body {
     color: var(--text-color);
-    background-color: var(--background-primary);
+    background-color: var(--bg-primary);
+}
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+background: orange;        /* color of the tracking area */
+}
+  
+body::-webkit-scrollbar-thumb {
+background-color: blue;    /* color of the scroll thumb */
+border-radius: 20px;       /* roundness of the scroll thumb */
+border: 3px solid orange;  /* creates padding around scroll thumb */
+}
+
+div::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+
+div::-webkit-scrollbar-track {
+background: orange;        /* color of the tracking area */
+}
+  
+div::-webkit-scrollbar-thumb {
+background-color: blue;    /* color of the scroll thumb */
+border-radius: 20px;       /* roundness of the scroll thumb */
+border: 3px solid orange;  /* creates padding around scroll thumb */
 }
 
 body.light {
-    --background-primary: var(--bg-primary);
-    --text-color: var(--h1-color);
+    --bg-primary: var(--bg-primary-l);
+    --icon-darkmode: var(--icon-dark-mode-l);
+    --text-color: var(--h1-color-l);
+    --navbar-txt-color: var(--navbar-txt-color-l);
+    --navbar-bg-color: var(--navbar-bg-color-l);
+    --link-color: var(--link-color-l);
+    --link-color-hover: var(--link-color-hover-l);
 }
 
 body.dark {
-    --background-primary: var(--bg-primary-dark);
-    --text-color: var(--h1-color-dark);
+    --bg-primary: var(--bg-primary-d);
+    --icon-darkmode: var(--icon-dark-mode-d);
+    --text-color: var(--h1-color-d);
+    --navbar-txt-color: var(--navbar-txt-color-d);
+    --navbar-bg-color: var(--navbar-bg-color-d);
+    --link-color: var(--link-color-d);
+    --link-color-hover: var(--link-color-hover-d);
 }
 
 

@@ -2,19 +2,26 @@
 
     /* --LIGHT--MODE--*/
 
-    --bg-primary: linear-gradient(180deg, #FFEFEF 0%, #FFFFFF 100%);
-    --bg-secondary: #eee;
-    --h1-color: #2F80ED;
-    --p-color: #6d6d6d;
-    --link-color: #2F80ED;
-    --link-color-hover: #3cc368;
+    --bg-primary-l: linear-gradient(180deg, #8EDDFF 0%, #FFFFFF 100%)  ;
+    --bg-secondary-l: #eee;
+    --h1-color-l: #2F80ED;
+    --p-color-l: #6d6d6d;
+    --link-color-l: #2F80ED;
+    --link-color-hover-l: #eee;
+    --icon-dark-mode-l: url('../assets/moon.svg') no-repeat center;
+    --navbar-txt-color-l: #2F80ED;
+    --navbar-bg-color-l: #fff;
 
     /* --DARK--MODE--*/
 
-    --bg-primary-dark: #000;
-    --bg-secondary-dark: #eee;
-    --h1-color-dark: #3cc368;
-    --p-color-dark: #6d6d6d;
-    --link-color-dark: #2F80ED;
-    --link-color-hover-dark: #3cc368;
+    --bg-primary-d: rgb(53, 53, 53);
+    --bg-secondary-d: #eee;
+    --h1-color-d: #3cc368;
+    --p-color-d: #6d6d6d;
+    --link-color-d: #2F80ED;
+    --link-color-hover-d: #eee;
+    --icon-dark-mode-d: url('../assets/sun.svg') no-repeat center;
+    --navbar-txt-color-d: #aeaeae;
+    --navbar-bg-color-d: rgb(66, 66, 66);
+
 }
