@@ -1,0 +1,10 @@
+{
+  "name": "repapp",
+  "version": "1.0.0",
+  "repository": "https://github.com/marcioandrews/repapp.git",
+  "author": "Marcio Ordonez <marcio.v.ordonez@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start:server": "cd server && yarn serve"
+  }
+}
