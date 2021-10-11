@@ -17,22 +17,15 @@
     flex-direction: column;
     background: linear-gradient(50deg, #6e00ff 0, #bb00ff 100%);
 }
-.box {
-    background-color: tomato;
-    width: 250px;
-    height: 250px;
-    border: 1px solid #fff;
-    box-sizing: border-box;
-    overflow:auto;
-    /* scrollbar-width: thin; 
-    scrollbar-color: blue orange; */
 
-}
 #page-workspace .content-wrapper-bg {
     background: url('../../assets/landing.svg') no-repeat 80% center;
 
 }
-
+#page-workspace .content-cards {
+    flex-direction: row;
+    display: flex;
+}
 #page-workspace .content-wrapper main {
     max-width: 350;
 

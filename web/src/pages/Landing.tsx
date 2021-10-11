@@ -1,8 +1,7 @@
 import '../styles/Global.css';
 import '../styles/Variables.css';
 import '../styles/pages/Landing.css';
-import logoImg from '../assets/logo.svg';
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import Navbar from '../components/navbar/Navbar';
 
 function Landing() {

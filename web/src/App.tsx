@@ -1,4 +1,3 @@
-import Navbar from './components/navbar/Navbar';
 import Routes from './routes';
 
 function App() {

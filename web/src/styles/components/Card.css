@@ -1,0 +1,12 @@
+.page-card {
+    background-color: tomato !important;
+    width: 250px;
+    height: 250px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    overflow:auto;
+    margin-inline: 15px;
+    /* scrollbar-width: thin; 
+    scrollbar-color: blue orange; */
+
+}

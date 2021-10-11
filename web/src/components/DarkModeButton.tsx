@@ -4,14 +4,12 @@ import Lottie from "react-lottie";
 import DarkModeBtn from "../assets/lotties/darkmode-button.json"
 
 const DarkMode = () => {
+  const themeMode = {
+    LIGHT: "light",
+    DARK: "dark",
+  }
 
-  // const [animationState, setAnimationState] = useState({
-  //   isStopped: false, isPaused: false,
-  //   direction: -1,
-  // });
   const [initial, setInitial] = useState([0, 170]);
-  const [isStopped, setIsStopped] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
   const [direction, setDirection] = useState(1);
 
   const defaultOptions = {
@@ -28,69 +26,52 @@ const DarkMode = () => {
   const body = document.body;
   const lightTheme = "light";
   const darkTheme = "dark";
-  let theme:any;
+  let theme: any;
 
   if (localStorage) {
     theme = localStorage.getItem("theme");
-    
   }
 
+  theme ? body.classList.add(theme) : body.classList.add("light")
 
-  if (theme === lightTheme || theme === darkTheme) {
-    body.classList.add(theme);
-  } else {
-    body.classList.add(lightTheme);
-   
+  const switchTheme = (e: any) => {
+    switch (theme) {
 
-  }
-
-  const switchTheme = (e:any) => {
-    if (theme === darkTheme) {
-      body.classList.replace(darkTheme, lightTheme);
-      e.target.classList.remove(clickedClass);
-      localStorage.setItem("theme", "light");
-      theme = lightTheme;
-      setInitial([0, 170])
-      setDirection(1)
-      // setIsPaused(!true)
-      // setIsStopped(true)
-    } else {
-      body.classList.replace(lightTheme, darkTheme);
-      e.target.classList.add(clickedClass);
-      localStorage.setItem("theme", "dark");
-      theme = darkTheme;
-      setInitial([0, 170])
-      setDirection(-1)
-      // setIsPaused(!true)
-      // setIsStopped(true)
-
+      case themeMode.DARK:
+        body.classList.replace(themeMode.DARK, themeMode.LIGHT);
+        e.target.classList.remove(clickedClass);
+        localStorage.setItem("theme", "light");
+        theme = "light";
+        setInitial([0, 170])
+        setDirection(1)
+        break;
+      case themeMode.LIGHT:
+        body.classList.replace(themeMode.LIGHT, themeMode.DARK);
+        e.target.classList.add(clickedClass);
+        localStorage.setItem("theme", "dark");
+        theme = "dark";
+        setInitial([0, 170])
+        setDirection(-1)
+        break;
     }
-
-
   };
 
   return (
 
-        <button
-        className={theme === "dark" ? clickedClass : ""}
-        id="darkMode"
-        onClick={(e) => switchTheme(e) }
-        
-        >
-      <Lottie 
+    <button
+      className={theme === "dark" ? clickedClass : ""}
+      id="darkMode"
+      onClick={(e) => switchTheme(e)}>
+      <Lottie
         options={defaultOptions}
         height={55}
         width={"100%"}
         speed={3}
-        direction={ direction}
-        isStopped={isStopped}
-        isPaused={isPaused}
-        
-      />
-     
-
-        </button>
-        );
+        direction={direction}
+        isStopped={false}
+        isPaused={false} />
+    </button>
+  );
 };
 
 export default DarkMode;
