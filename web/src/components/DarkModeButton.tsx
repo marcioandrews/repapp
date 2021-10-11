@@ -1,13 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../styles/components/DarkModeButton.css";
 import Lottie from "react-lottie";
 import DarkModeBtn from "../assets/lotties/darkmode-button.json"
 
 const DarkMode = () => {
-  const themeMode = {
-    LIGHT: "light",
-    DARK: "dark",
-  }
 
   const [initial, setInitial] = useState([0, 170]);
   const [direction, setDirection] = useState(1);
@@ -24,42 +20,43 @@ const DarkMode = () => {
 
   let clickedClass = "clicked";
   const body = document.body;
-  const lightTheme = "light";
-  const darkTheme = "dark";
+  enum themeMode {
+    DEFAULT = "light",
+    LIGHT = "light",
+    DARK = "dark",
+  }
   let theme: any;
 
   if (localStorage) {
     theme = localStorage.getItem("theme");
   }
 
-  theme ? body.classList.add(theme) : body.classList.add("light")
+  theme ? body.classList.add(theme) : body.classList.add(themeMode.DEFAULT)
 
   const switchTheme = (e: any) => {
     switch (theme) {
-
       case themeMode.DARK:
         body.classList.replace(themeMode.DARK, themeMode.LIGHT);
         e.target.classList.remove(clickedClass);
-        localStorage.setItem("theme", "light");
-        theme = "light";
+        localStorage.setItem("theme", themeMode.LIGHT);
+        theme = themeMode.LIGHT;
         setInitial([0, 170])
         setDirection(1)
         break;
       case themeMode.LIGHT:
         body.classList.replace(themeMode.LIGHT, themeMode.DARK);
         e.target.classList.add(clickedClass);
-        localStorage.setItem("theme", "dark");
-        theme = "dark";
+        localStorage.setItem("theme", themeMode.DARK);
+        theme = themeMode.DARK;
         setInitial([0, 170])
         setDirection(-1)
         break;
     }
   };
-
   return (
 
     <button
-      className={theme === "dark" ? clickedClass : ""}
+      className={theme === themeMode.DARK ? clickedClass : ""}
       id="darkMode"
       onClick={(e) => switchTheme(e)}>
       <Lottie
