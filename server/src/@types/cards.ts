@@ -4,7 +4,7 @@ export enum Status {
   DONE = "DONE",
 }
 
-export interface Cards {
+export interface Card {
   id: number;
   title: string;
   description: string;
@@ -12,4 +12,10 @@ export interface Cards {
   creationTime: string;
   updateTime: string;
   deletionTime: string;
+}
+
+export interface CardsPayload {
+  title: string;
+  description: string;
+  status: Status;
 }
