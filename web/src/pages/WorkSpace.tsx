@@ -1,7 +1,6 @@
 import '../styles/Global.css';
 import '../styles/Variables.css';
 import '../styles/pages/WorkSpace.css';
-// import { Link } from 'react-router-dom'
 import Navbar from '../components/navbar/Navbar';
 import Card from '../components/Card';
 

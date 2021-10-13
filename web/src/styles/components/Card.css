@@ -1,12 +1,24 @@
+.card {
+    background-color: rgba(177, 177, 177, 0.404);
+    flex-direction: column;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 8px;
+}
 .page-card {
-    background-color: tomato !important;
+    background-color: rgba(177, 177, 177, 0.404);
     width: 250px;
     height: 250px;
-    border: 1px solid #fff;
     box-sizing: border-box;
     overflow:auto;
-    margin-inline: 15px;
-    /* scrollbar-width: thin; 
-    scrollbar-color: blue orange; */
-
+    border-radius: 8px;
 }
+
+.title-card {
+    padding-top: 0px;
+}
+.text-card {
+    padding: 10px;
+    
+}
+
