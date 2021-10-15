@@ -11,9 +11,11 @@ function WorkSpace() {
       <Navbar />
       <main>
         <div className="content-wrapper"> 
-          <h1>O Repapp ajuda os times a agilizar o trabalho. teste</h1>
-          <p>Colabore, gerencie projetos e alcance novos picos de produtividade. Seja em um arranha-céu ou em’ home office, o jeito de trabalhar do seu time é único, e o Trello pode ajudar você a produzir cada vez mais.</p>
           <div className="content-cards">
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
             <Card/>
             <Card/>
             <Card/>
@@ -21,33 +23,6 @@ function WorkSpace() {
             <Card/>
           </div>
         </div> 
-        <div className="content-wrapper-bg">
-        <h1>O Repapp ajuda os times a agilizar o trabalho.</h1>
-          <p>Colabore, gerencie projetos e alcance novos picos de produtividade. Seja em um arranha-céu ou em’ home office, o jeito de trabalhar do seu time é único, e o Trello pode ajudar você a produzir cada vez mais.</p>
-          <p>Colabore, gerencie projetos e alcance novos picos de produtividade. Seja em um arranha-céu ou em’ home office, o jeito de trabalhar do seu time é único, e o Trello pode ajudar você a produzir cada vez mais.</p>
-          <p>Colabore, gerencie projetos e alcance novos picos de produtividade. Seja em um arranha-céu ou em’ home office, o jeito de trabalhar do seu time é único, e o Trello pode ajudar você a produzir cada vez mais.</p>
-          <p>Colabore, gerencie projetos e alcance novos picos de produtividade. Seja em um arranha-céu ou em’ home office, o jeito de trabalhar do seu time é único, e o Trello pode ajudar você a produzir cada vez mais.</p>
-          <p>Colabore, gerencie projetos e alcance novos picos de produtividade. Seja em um arranha-céu ou em’ home office, o jeito de trabalhar do seu time é único, e o Trello pode ajudar você a produzir cada vez mais.</p>
-          <h1>O Repapp ajuda os times a agilizar o trabalho.</h1>
-          <p>Colabore, gerencie projetos e alcance novos picos de produtividade. Seja em um arranha-céu ou em’ home office, o jeito de trabalhar do seu time é único, e o Trello pode ajudar você a produzir cada vez mais.</p>
-          <p>Colabore, gerencie projetos e alcance novos picos de produtividade. Seja em um arranha-céu ou em’ home office, o jeito de trabalhar do seu time é único, e o Trello pode ajudar você a produzir cada vez mais.</p>
-          <p>Colabore, gerencie projetos e alcance novos picos de produtividade. Seja em um arranha-céu ou em’ home office, o jeito de trabalhar do seu time é único, e o Trello pode ajudar você a produzir cada vez mais.</p>
-          <p>Colabore, gerencie projetos e alcance novos picos de produtividade. Seja em um arranha-céu ou em’ home office, o jeito de trabalhar do seu time é único, e o Trello pode ajudar você a produzir cada vez mais.</p>
-          <p>Colabore, gerencie projetos e alcance novos picos de produtividade. Seja em um arranha-céu ou em’ home office, o jeito de trabalhar do seu time é único, e o Trello pode ajudar você a produzir cada vez mais.</p>
-          <h1>O Repapp ajuda os times a agilizar o trabalho.</h1>
-          <p>Colabore, gerencie projetos e alcance novos picos de produtividade. Seja em um arranha-céu ou em’ home office, o jeito de trabalhar do seu time é único, e o Trello pode ajudar você a produzir cada vez mais.</p>
-          <p>Colabore, gerencie projetos e alcance novos picos de produtividade. Seja em um arranha-céu ou em’ home office, o jeito de trabalhar do seu time é único, e o Trello pode ajudar você a produzir cada vez mais.</p>
-          <p>Colabore, gerencie projetos e alcance novos picos de produtividade. Seja em um arranha-céu ou em’ home office, o jeito de trabalhar do seu time é único, e o Trello pode ajudar você a produzir cada vez mais.</p>
-          <p>Colabore, gerencie projetos e alcance novos picos de produtividade. Seja em um arranha-céu ou em’ home office, o jeito de trabalhar do seu time é único, e o Trello pode ajudar você a produzir cada vez mais.</p>
-          <p>Colabore, gerencie projetos e alcance novos picos de produtividade. Seja em um arranha-céu ou em’ home office, o jeito de trabalhar do seu time é único, e o Trello pode ajudar você a produzir cada vez mais.</p>
-          <h1>O Repapp ajuda os times a agilizar o trabalho.</h1>
-          <p>Colabore, gerencie projetos e alcance novos picos de produtividade. Seja em um arranha-céu ou em’ home office, o jeito de trabalhar do seu time é único, e o Trello pode ajudar você a produzir cada vez mais.</p>
-          <p>Colabore, gerencie projetos e alcance novos picos de produtividade. Seja em um arranha-céu ou em’ home office, o jeito de trabalhar do seu time é único, e o Trello pode ajudar você a produzir cada vez mais.</p>
-          <p>Colabore, gerencie projetos e alcance novos picos de produtividade. Seja em um arranha-céu ou em’ home office, o jeito de trabalhar do seu time é único, e o Trello pode ajudar você a produzir cada vez mais.</p>
-          <p>Colabore, gerencie projetos e alcance novos picos de produtividade. Seja em um arranha-céu ou em’ home office, o jeito de trabalhar do seu time é único, e o Trello pode ajudar você a produzir cada vez mais.</p>
-          <p>Colabore, gerencie projetos e alcance novos picos de produtividade. Seja em um arranha-céu ou em’ home office, o jeito de trabalhar do seu time é único, e o Trello pode ajudar você a produzir cada vez mais.</p>
-         
-        </div>
       </main>
 
     </div>

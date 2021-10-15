@@ -9,33 +9,35 @@ body {
     background-color: var(--bg-primary);
 }
 body::-webkit-scrollbar {
-    width: 10px;    
+    width: 14px;
+    height: 14px;    
+    background-color: #eee;        /* color of the tracking area */
 }
 
 body::-webkit-scrollbar-track {
-    background: rgba(66, 66, 66, 0.233);        /* color of the tracking area */
-    border-radius: 8px;       /* roundness of the scroll thumb */
+    border-radius: 0px;       /* roundness of the scroll thumb */
 }
   
 body::-webkit-scrollbar-thumb {
     background-color: rgba(66, 66, 66, 0.404);    /* color of the scroll thumb */
     border-radius: 8px;       /* roundness of the scroll thumb */
-    border: 4px solid transparent;  /* creates padding around scroll thumb */
+    border: 3px solid #eee;  /* creates padding around scroll thumb */
 }
 
 div::-webkit-scrollbar {
-    width: 9px;               /* width of the entire scrollbar */
+    width: 10px;               /* width of the entire scrollbar */
+    height: 10px;
 }
 
 div::-webkit-scrollbar-track {
-    background: rgba(66, 66, 66, 0.404);        /* color of the tracking area */
-    border-radius: 8px;       /* roundness of the scroll thumb */
+    background: #eee;        /* color of the tracking area */
+    border-radius: 0px;       /* roundness of the scroll thumb */
 }
   
 div::-webkit-scrollbar-thumb {
-    background-color: rgba(66, 66, 66, 0.404);    /* color of the scroll thumb */
+    background-color: rgba(66, 66, 66, 0.2);    /* color of the scroll thumb */
     border-radius: 8px;       /* roundness of the scroll thumb */
-    border: 4px solid transparent;  /* creates padding around scroll thumb */
+    border: 1px solid #eee;  /* creates padding around scroll thumb */
 }
 
 body.light {

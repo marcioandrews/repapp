@@ -1,24 +1,63 @@
-.card {
-    background-color: rgba(177, 177, 177, 0.404);
-    flex-direction: column;
-    padding: 10px;
-    margin-right: 10px;
-    border-radius: 8px;
-}
-.page-card {
-    background-color: rgba(177, 177, 177, 0.404);
-    width: 250px;
-    height: 250px;
+.list {
     box-sizing: border-box;
-    overflow:auto;
-    border-radius: 8px;
+    display: inline-block;
+    height: 100%;
+    margin: 0 4px;
+    vertical-align: top;
+    /* white-space: nowrap; */
+    width: 272px;
 }
 
-.title-card {
-    padding-top: 0px;
+.list-content {
+    background-color: #ebecf0;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    position: relative;
+    white-space: normal;
 }
-.text-card {
+
+.list-header {
+    flex: 0 0 auto;
+    min-height: 20px;
+    padding: 10px 8px;
+    position: relative;
+}
+
+.list-cards {
+    flex: 1 1 auto;
+    margin: 0 4px;
+    min-height: 0;
+    padding: 0 4px;
+    /* z-index: 1; */
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+p {
+    color: gray;
+    margin: 5px;
+    line-height: 16px;
+}
+
+.list-cards p {
     padding: 10px;
-    
+    margin-inline: 5px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.list-cards p:hover{
+    background-color: #eeee;
+}
+
+.card-composer {
+    display: flex;
+    justify-content: space-between;
+    max-height: 38px;
+    min-height: 38px;
 }
 

@@ -1,17 +1,22 @@
 #page-workspace{
-    width: 100%;
-    height: 100%;
+    background: linear-gradient(50deg, #6e00ff 0, #bb00ff 100%);
+    /* position: absolute;
+    overflow-x: auto;
+    overflow-y: hidden;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: max-content;
+    display: flex; */
+    flex-grow: 1;
+    /* position: relative; */
 }
 
 #page-workspace .content-wrapper {
-    position: relative;
-    /* max-width: 1100px; */
-    padding-top: 120px;
-    max-height: 1680px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background: linear-gradient(50deg, #6e00ff 0, #bb00ff 100%);
+    /* position: relative; */
+    padding-top: 100px;
+    flex-direction: column;   
 }
 
 #page-workspace .content-wrapper-bg {
@@ -19,14 +24,26 @@
 
 }
 #page-workspace .content-cards {
-    flex-direction: row;
+    /* flex-direction: row;
     display: flex;
-    width: 100%;
     justify-content: start;
-    padding: 15px;
+    padding: 15px; */
+    bottom: 0;
+    left: 0;
+    margin-top: 100px;
+    margin-bottom: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-user-select: none;
+    user-select: none;
+    white-space: nowrap;
 }
 #page-workspace .content-wrapper main {
-    max-width: 350;
+    /* max-width: 350; */
 
 }
 
@@ -37,9 +54,9 @@
     color: white;
 }
 
-#page-workspace .content-wrapper p {
+/* #page-workspace .content-wrapper p {
     margin: 5px;
     font-size: 24px;
     line-height: 26px;
     color: white;
-}
+} */
