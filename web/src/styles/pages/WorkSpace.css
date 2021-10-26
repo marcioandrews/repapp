@@ -17,6 +17,7 @@
     /* position: relative; */
     padding-top: 100px;
     flex-direction: column;   
+    
 }
 
 #page-workspace .content-wrapper-bg {
@@ -38,6 +39,8 @@
     position: absolute;
     right: 0;
     top: 0;
+    flex-direction: row;
+    display: flex;
     -webkit-user-select: none;
     user-select: none;
     white-space: nowrap;
@@ -60,3 +63,14 @@
     line-height: 26px;
     color: white;
 } */
+
+.card-composerr {
+    /* margin: 10px;
+    padding: 2px;
+    padding-inline: 6px; */
+    padding-right: 35px;
+    
+}
+
+
+
