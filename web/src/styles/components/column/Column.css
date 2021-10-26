@@ -5,7 +5,7 @@
     margin: 0 4px;
     vertical-align: top;
     /* white-space: nowrap; */
-    width: 272px;
+    min-width: 272px;
 }
 
 .list-content {
@@ -42,7 +42,7 @@ p {
     line-height: 16px;
 }
 
-.list-cards p {
+/* .list-cards p {
     padding: 10px;
     margin-inline: 5px;
     margin-bottom: 10px;
@@ -52,12 +52,32 @@ p {
 
 .list-cards p:hover{
     background-color: #eeee;
-}
+} */
 
 .card-composer {
     display: flex;
+    justify-content: center;
+    margin-block: 10px;
+    /* max-height: 38px;
+    min-height: 38px; */
+}
+
+.buttons-content {
+    flex-direction: row;
     justify-content: space-between;
-    max-height: 38px;
-    min-height: 38px;
+    align-items: center;
+    display: flex;
+    padding: 15px;
+
+}
+
+.button {
+    background-color: rgba(45, 226, 21, 0.933);
+    border-radius: 4px;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 120px;
 }
 
