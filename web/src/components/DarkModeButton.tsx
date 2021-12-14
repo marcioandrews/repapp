@@ -25,15 +25,16 @@ const DarkMode = () => {
     LIGHT = "light",
     DARK = "dark",
   }
-  let theme: any;
+  let theme: any = themeMode.DEFAULT;
 
-  if (localStorage) {
+  if (localStorage.getItem("theme")) {
     theme = localStorage.getItem("theme");
   }
 
   theme ? body.classList.add(theme) : body.classList.add(themeMode.DEFAULT)
 
   const switchTheme = (e: any) => {
+    console.log(theme)
     switch (theme) {
       case themeMode.DARK:
         body.classList.replace(themeMode.DARK, themeMode.LIGHT);
@@ -66,9 +67,9 @@ const DarkMode = () => {
         speed={3}
         direction={direction}
         isStopped={false}
-        isPaused={false} />
+        isPaused={false}
+      />
     </button>
   );
 };
-
 export default DarkMode;

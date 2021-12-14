@@ -50,7 +50,7 @@ export default {
         const usersRepository = getRepository(userModel);
         const user = await usersRepository.findOne(id);
         const columnsRepository = getRepository(columnModel);
-        const columns = await columnsRepository.find({ where: {userId:id}})
+        const columns = await columnsRepository.find({ where: {userId:id}, relations: ['cards']})
         if (user) {
             return response.status(200).json(columns)
         }
@@ -93,7 +93,11 @@ export default {
 
         const column = columnsRepository.create(data);
         await columnsRepository.save(column);
-        return response.status(201).json(column);
+        const getColumnsRepository = getRepository(columnModel);
+        const columnRes = await getColumnsRepository.findOne(column.id, {
+            relations: ['cards']
+        });
+        return response.status(201).json(columnRes);
 
     }
 }

@@ -19,7 +19,6 @@ export default {
                 let email = login 
                 if ( email != (null || "")) {
                     email = email.toLowerCase();
-                    console.log("email")
                     const userEmail = await usersRepository.findOne({ where: { email }});
                     
                     
@@ -31,9 +30,10 @@ export default {
                         return response.status(401).json("Invalid password.");
                     }
                     const token = jwt.sign({id: userEmail.id}, '@uhjiihh2324jnsd', { expiresIn: '1d'});
+                    console.log("email")
                     
                     return response.json({
-                        userEmail,
+                        id: userEmail.id,
                         token,
                     });
                 }
@@ -42,7 +42,6 @@ export default {
                 let userName = login 
                 if ( userName != (null || "")) {
                     userName = userName.toLowerCase();
-                    console.log("user")
                     const userUserName = await usersRepository.findOne({ where: { userName }});
                     
                     
@@ -54,9 +53,10 @@ export default {
                         return response.status(401).json("Invalid password.");
                     }
                     const token = jwt.sign({id: userUserName.id}, '@uhjiihh2324jnsd', { expiresIn: '1d'});
+                    console.log("user")
                     
                     return response.json({
-                        userUserName,
+                        id: userUserName.id,
                         token,
                     });
                 }

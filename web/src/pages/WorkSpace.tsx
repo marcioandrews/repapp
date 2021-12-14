@@ -3,46 +3,46 @@ import '../styles/Variables.css';
 import '../styles/pages/WorkSpace.css';
 import Navbar from '../components/navbar/Navbar';
 import ColumnContent from '../components/column/Column';
-import Input from '../components/column/Input';
-import { useState } from 'react';
-import { Columns, Column, Card } from '../types/Columns';
+import InputColumn from '../components/column/InputColumn';
+import { useState, useEffect } from 'react';
+import { Columns, Card } from '../types/Columns';
+import { getColumns, createColumn, deleteColumn } from '../context/AuthProvider/util'
 
 function WorkSpace() {
-  const [input, setInput] = useState(false)
-  const [saveContent, setSaveContent] = useState('')
+  const [inputSaveColumn, setInputSaveColumn] = useState(false)
+  const [inputDeleteColumn, setInputDeleteColumn] = useState(false)
+  const [saveInputTitle, setSaveInputTitle] = useState('')
+  const [columns, setColumns] = useState([] as Columns)
 
-  let card: Card = {
-    title: "kkkkkk",
-    discription: "sjoisjisis",
-    tags: "jijdiidd",
-    priority: "sjfhusfhujs"
+  async function saveColumns(): Promise<Columns> {
+    const savedColumns = await getColumns()
+    setColumns(savedColumns)
+    return savedColumns
   }
 
-  let column: Column = {
-    title: "kkkkkk",
-    card: [
-      card, card, card
-    ]
+  useEffect(() => {
+    saveColumns();
+
+  }, []);
+  async function saveColumn() {
+    const newColumn = await createColumn(saveInputTitle)
+    console.log(newColumn)
+    columns.push(newColumn)
+    setInputSaveColumn(!inputSaveColumn)
+  };
+
+  function deleteColumnData(columnIndex: number, columnId: string) {
+    deleteColumn(columnId)
+    columns.splice(columnIndex, 1)
+    setInputDeleteColumn(!inputDeleteColumn)
   }
 
-  let columns: Columns =
-    [
-      column, column
-    ]
-    
-  function addCard(index: number, content: string) {
-    // data.cards[index].push(content)
-    console.log(index, content)
+  function title(title: string) {
+    setSaveInputTitle(title)
   }
-  function content(content: string) {
-    setSaveContent(content)
 
-  }
-  function saveButton() {
-    setInput(!input)
-    // data.cards.push([])
-    // data.columns.push(saveContent)
-    // console.log(data.cards)
+  function saveCard(card: Card, columnIndex: number) {
+    columns[columnIndex].cards.push(card)
   }
 
   return (
@@ -52,24 +52,23 @@ function WorkSpace() {
         <div className="content-wrapper">
           <div className="content-cards">
 
-            {columns.map((column) =>
-              <ColumnContent column={column} />
+            {columns.map((column, columnIndex: number) =>
+              <ColumnContent key={column.id} saveCard={saveCard} columnIndex={columnIndex} column={column} deleteColumnData={deleteColumnData} />
             )}
             <div className="card-composerr">
-              {input ?
-                <Input content={content}>
+              {inputSaveColumn ?
+                <InputColumn title={title}>
                   <div className="buttons-content">
                     <div className="button">
-                      <p onClick={saveButton}>Salvar</p>
+                      <p onClick={saveColumn}>Salvar</p>
                     </div>
                     <div>
-                      <p onClick={() => setInput(!input)}>X</p>
-                      <p onClick={() => console.log(saveContent)}>V</p>
+                      <p onClick={() => setInputSaveColumn(!inputSaveColumn)}>X</p>
                     </div>
                   </div>
-                </Input>
+                </InputColumn>
                 :
-                <p onClick={() => setInput(!input)}>+ Adicionar outra lista</p>}
+                <p onClick={() => setInputSaveColumn(!inputSaveColumn)}>+ Adicionar outra lista</p>}
             </div>
           </div>
 

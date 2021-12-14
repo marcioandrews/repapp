@@ -18,19 +18,19 @@ routes.patch('/user/:id', UsersController.restore);
 routes.put('/user/:id', AuthMiddleware, UsersController.update);
 routes.post('/user', UsersController.create);
 
-routes.get('/columns/:id', ColumnsController.index);
-routes.get('/column/:id', ColumnsController.show);
-routes.delete('/column/:id', ColumnsController.delete);
-routes.patch('/column/:id', ColumnsController.restore);
-routes.put('/column/:id', ColumnsController.update);
-routes.post('/column', ColumnsController.create);
+routes.get('/columns/:id', AuthMiddleware, ColumnsController.index);
+routes.get('/column/:id', AuthMiddleware, ColumnsController.show);
+routes.delete('/column/:id', AuthMiddleware, ColumnsController.delete);
+routes.patch('/column/:id', AuthMiddleware, ColumnsController.restore);
+routes.put('/column/:id', AuthMiddleware, ColumnsController.update);
+routes.post('/column', AuthMiddleware, ColumnsController.create);
 
-routes.get('/cards/:id', CardsController.index);
-routes.get('/card/:id', CardsController.show);
-routes.delete('/card/:id', CardsController.delete);
-routes.patch('/card/:id', CardsController.restore);
-routes.put('/card/:id', CardsController.update);
-routes.post('/card', CardsController.create);
+routes.get('/cards/:id', AuthMiddleware, CardsController.index);
+routes.get('/card/:id', AuthMiddleware, CardsController.show);
+routes.delete('/card/:id', AuthMiddleware, CardsController.delete);
+routes.patch('/card/:id', AuthMiddleware, CardsController.restore);
+routes.put('/card/:id', AuthMiddleware, CardsController.update);
+routes.post('/card', AuthMiddleware, CardsController.create);
 
 
 export default routes
