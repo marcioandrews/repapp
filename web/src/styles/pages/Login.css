@@ -1,4 +1,4 @@
-#page-landing {
+#page-login {
     width: 100%;
     height: 100%;
     justify-content: center;
@@ -7,20 +7,22 @@
     position: relative;
 }
 
-#page-landing .main-content {
+#page-login .main-content {
     box-sizing: border-box;
 }
 
-#page-landing .section-rotate {
+#page-login .section-rotate {
     padding-top: 4rem;
     padding-bottom: 4rem;
     overflow: hidden;
     background: transparent;
     position: relative;
+    display: flex;
+
     /* z-index: 0; */
     /* padding-top: 500px; */
 }
- .section-rotate .section-inner {
+#page-login .section-rotate .section-inner {
     top: -40%;
     left: -1rem;
     width: 130%;
@@ -30,26 +32,50 @@
     overflow: hidden;
     position: absolute;
 }
-.bg-gradient-primary {
+#page-login .bg-gradient-primary {
     background: linear-gradient(50deg, #6e00ff 0, #bb00ff 100%) !important;
 }
-.container {
+#page-login .container {
     width: 100%;
     padding-right: 15px;
-    padding-left: 15px;
-    margin-bottom: 30%;
+    padding-left: 10%;
     margin-top: 80px;
-    margin-right: auto;
-    margin-left: 100px;
-    position: relative !important;
-    
+    position: relative !important;    
+    flex-direction: row;
+    display: flex;
+}
+#page-login .section-login {
+    display: inline;
+}
+#page-login .login {
+    width: 40%;
+    height: 40%;
+    padding-left: 10%;
 }
 
-p {
-    color: white;
+#page-login input {
+    padding-left: 10px;
+    width: 400px;
+    height: 40px;
+    margin-top: 10px;
 }
 
-h1 {
+#page-login label {
+    color: #ffffff;
+    font-size: 25px;
+}
+
+#page-login .button {
+    padding-left: 0px;
+    color: #ffffff;
+    font-size: 25px;
+    background: linear-gradient(50deg, #6e00ff 0, #bb00ff 100%) !important;
+    height: 60px;
+
+}
+
+#page-login h1 {
+    text-align: center;
     color: white;
     font-size: 60px;
 }

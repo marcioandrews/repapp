@@ -70,7 +70,7 @@ window.addEventListener('scroll', changeBackground)
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              Services <i className='fas fa-caret-down' />
+              Serviços <i className='fas fa-caret-down' />
             </Link>
             {dropdown && <Dropdown />}
           </li>
@@ -80,16 +80,7 @@ window.addEventListener('scroll', changeBackground)
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              Products
-            </Link>
-          </li>
-          <li className='nav-item'>
-            <Link
-              to='/'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Contact Us
+              Criar Conta
             </Link>
           </li>
           <li>
@@ -98,7 +89,7 @@ window.addEventListener('scroll', changeBackground)
               className='nav-links-mobile'
               onClick={closeMobileMenu}
             >
-              Sign Up
+              Login
             </Link>
 
           </li>

@@ -7,9 +7,9 @@ import { useHistory } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { Logged } from '../context/AuthProvider/util'
 import { AuthContext } from '../context/AuthProvider';
+import LoginImage from '../assets/login.svg'
 
 const Login = () => {
-  const userContext = useContext(AuthContext);
 
   async function CheckLogged() {
     const response = await Logged()
@@ -37,15 +37,15 @@ const Login = () => {
   }
   return (
 
-    <div id="page-landing">
+    <div id="page-login">
       <Navbar />
       <main>
         <div className="main-content">
           <section className="header-1 section-rotate bg-section-secondary" >
             <div className="section-inner bg-gradient-primary"></div>
             <div className="container">
-
-              <h1>Login.</h1>
+              <div className="section-login">
+              <h1>Login</h1>
               <label>
                 login:
                 <br />
@@ -58,11 +58,13 @@ const Login = () => {
                 <input type="password" name="password" placeholder="******" security="password" onChange={(e) => setPassWord(e.target.value)} />
               </label>
               <br />
-              <input type="submit" value="Entrar" onClick={() => onFinish(login, password)} />
-              <input type="submit" value="infosUser" onClick={() => Logged()} />
-              <input type="submit" value="logout" onClick={() => userContext.logout()} />
+              <input className="button" type="submit" value="ENTRAR" onClick={() => onFinish(login, password)} />
+              <br />
+              {/* <input className="button" type="submit" value="logout" onClick={() => userContext.logout()} /> */}
+              </div>
             </div>
           </section>
+        <img className="login" src={LoginImage} alt="Login Image" />
         </div>
       </main>
     </div>

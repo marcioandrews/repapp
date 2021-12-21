@@ -12,9 +12,9 @@ function Routes() {
                 <Route  path="/login" component={Login} />
 
                 <Route path="/profile" component={WorkSpace} />
-                <ProtectedLayout>
+                {/* <ProtectedLayout>
                     <Route path="/workspace" component={WorkSpace}/>
-                </ProtectedLayout>
+                </ProtectedLayout> */}
             </Switch>
         </BrowserRouter>
     );

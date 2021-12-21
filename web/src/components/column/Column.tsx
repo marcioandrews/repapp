@@ -41,7 +41,7 @@ const ColumnContent: React.FC<ColumnsProps> = ({ column, columnIndex, saveCard, 
 
 
     return (
-        <div className="list">
+        <div id="list">
             <div className="list-content">
                 <div className="list-header">
                     {inputEdit ?

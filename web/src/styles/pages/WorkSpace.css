@@ -15,14 +15,26 @@
 
 #page-workspace .content-wrapper {
     /* position: relative; */
-    padding-top: 100px;
+    padding-top: 10px;
     flex-direction: column;   
     
 }
 
-#page-workspace .content-wrapper-bg {
-    background: url('../../assets/landing.svg') no-repeat 80% center;
-
+#page-workspace .navibarr {
+    padding-top: 15px;
+    margin-left: 50px;
+    align-items: center;
+    align-content: space-between;
+    /* display: flex; */
+}
+#page-workspace input {
+    margin-left: 15px;
+    padding-inline: 15px;
+    color: #ffffff;
+    font-size: 25px;
+    background: #6e00ff ;
+    height: 60px;
+    border-radius: 6px;
 }
 #page-workspace .content-cards {
     /* flex-direction: row;
@@ -45,10 +57,6 @@
     user-select: none;
     white-space: nowrap;
 }
-#page-workspace .content-wrapper main {
-    /* max-width: 350; */
-
-}
 
 #page-workspace .content-wrapper h1 {
     font-size: 50px;
@@ -56,13 +64,6 @@
     line-height: 70px;
     color: white;
 }
-
-/* #page-workspace .content-wrapper p {
-    margin: 5px;
-    font-size: 24px;
-    line-height: 26px;
-    color: white;
-} */
 
 .card-composerr {
     /* margin: 10px;

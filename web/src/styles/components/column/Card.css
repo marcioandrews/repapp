@@ -7,12 +7,17 @@
     margin-bottom: 8px;
 }
 
-.card :hover { 
-    background-color: #eee;
-}
-
 .card p {
     margin: 0px;
     font-size: 14px;
+    line-height:1.5;
     padding: 10px;
+}
+.card p :hover{
+    background: none;
+}
+.card :hover {
+    color: #fff;
+    border-radius: 4px;
+    background: linear-gradient(50deg, #6e00ff 0, #bb00ff 100%);
 }
